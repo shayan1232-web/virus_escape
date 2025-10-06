@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<title>Virus Escape</title> 
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<style> 
+
+    html, body { margin: 0; padding: 0; font-family: 'Inter', Arial, sans-serif; } 
+
+</style> 
+
+</head> 
+<body> 
+<div class="container"> 
+    <div class="header"> 
+        <h1>VIRUS ESCAPE</h1> 
+        <p>Survive 30 Second!</p> 
+    </div> 
+
+    <div class="game-container"> 
+        <canvas id="gameCanvas" width="800" height="600"></canvas> 
+
+        <div id="menuOverlay" class="overlay" style="background: rgba(0,0,0,0.9);"> 
+ 
+            <h2 style="font-size: 3rem; font-weight: 900; color: #06b6d4; text-shadow: 4px 4px 0 #000;">READY TO LOSE YOUR MIND?</h2>
+            <div class="overlay-instructions"> 
+                <b>
+                <p>🎯 Dodge the viruses</p> 
+                <p>⚡ Collect power-ups</p> 
+                <p>🧠 Keep your sanity</p> 
+                <p>🕹️ Use W,A,S,D or(D-pad)</p> 
+                <p>🔥 Press *SPACEBAR* to shoot</p> 
+                <p>⏱️ Survive 30 seconds per level</p> </b>
+            </div> 
+            <button id="startBtn" class="button" style="background: #facc15;">🎮 START GAME</button> 
+        </div> 
+
+
+ <audio id="bgMusic" src="assets/bgmusic.mp3" loop preload="auto"></audio>
+
+    </div> 
+    
+  
+    <div id="joystickContainer">
+
+        <div class="dpad-container">
+            <div class="dpad-button" data-key="a">◀</div>
+            <div style="display: flex; flex-direction: column;">
+                <div class="dpad-button" data-key="w">▲</div>
+                <div style="height: 10px;"></div>
+                <div class="dpad-button" data-key="s">▼</div>
+            </div>
+            <div class="dpad-button" data-key="d">▶</div>
+        </div>
+
+        <div id="fireBtn" class="dpad-button" data-key=" " style="margin-right: 1rem;">FIRE</div>
+    </div>
+
+    <div class="ui-bar"> 
+        <div> 
+            <button id="soundBtn" class="button" style="background:#facc15; padding: 0.5rem 1rem; margin-top: 0; box-shadow: 2px 2px 0 #000;">🔊</button> 
+            <button id="pauseBtn" class="button" style="background:#ef4444; padding: 0.5rem 1rem; margin-top: 0; box-shadow: 2px 2px 0 #000;">PAUSE</button> 
+        </div> 
+        <div> 
+            <span id="levelText">LEVEL: 1/20</span> 
+            <span id="scoreText">SCORE: 0</span> 
+        </div> 
+    </div> 
+</div> 
+
+
+<script type="text/javascript" src="main.js"></script>
+</body> 
+</html>
